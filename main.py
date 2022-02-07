@@ -15,7 +15,7 @@ if __name__ == '__main__':
         exit(1)
 
     authtoken = loginreq.json()['Token']
-    heardersreq = {"Authorization": authtoken}
+    heardersreq = {"Authorization": "Bearer " + authtoken}
 
 
     richiestalezioni = requests.post('https://joblabsmarteducation.idea360.com/api/courses/main/get/414/lessons', headers=heardersreq)
